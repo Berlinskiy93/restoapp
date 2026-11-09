@@ -1,0 +1,327 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  height: 520px;
+  background: #fff;
+  color: #202020;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: calc(100% - 32px);
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+/* Шапка сайта */
+
+.site-header {
+  min-height: 72px;
+  background: linear-gradient(90deg, #FEDD2C 0%, #F9C201 100%);
+}
+
+.header-inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: inline-flex;
+  width: 137px;
+  height: 22px;
+  line-height: 0;
+}
+
+.logo img {
+  display: block;
+  width: 137px;
+  height: 22px;
+}
+
+/* Навигация */
+
+.navigation {
+  margin-left: 94px;
+}
+
+.nav-list {
+  display: flex;
+  width: 433px;
+  height: 40px;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list li {
+  height: 24px;
+  flex: 0 0 auto;
+}
+
+.nav-list li:nth-child(1) { width: 47px; }
+.nav-list li:nth-child(2) { width: 51px; }
+.nav-list li:nth-child(3) { width: 45px; }
+.nav-list li:nth-child(4) { width: 72px; }
+.nav-list li:nth-child(5) { width: 122px; }
+
+.nav-list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #555555;
+  white-space: nowrap;
+}
+
+/* Контактная информация */
+
+.contact-info {
+  width: 188px;
+  height: 40px;
+  flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+  color: #555555;
+}
+
+.phone {
+  display: block;
+  width: 173px;
+  height: 24px;
+  margin-left: auto;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: right;
+}
+
+.contact-info p {
+  width: 188px;
+  height: 16px;
+  margin: 2px 0 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+@media (min-width: 1025px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: 188px 1fr 188px;
+    gap: 0;
+  }
+
+  .navigation {
+    margin-left: 0;
+    justify-self: center;
+  }
+
+  .contact-info {
+    margin-left: 0;
+    justify-self: end;
+  }
+}
+
+/* Секция меню */
+
+.menu {
+  padding-top: 33px;
+}
+
+.menu h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 32px;
+  color: #1C1C1C;
+}
+
+/* Сетка карточек */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Карточки категорий */
+
+.menu-card {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .55);
+}
+
+.menu-card span {
+  display: block;
+  width: 100%;
+  height: 32px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  flex: 0 0 auto;
+}
+
+/* Изображения категорий */
+
+.pizza {
+  background-image:
+    linear-gradient(0deg, rgba(0, 0, 0, .45), transparent 38%),
+    url('./images/pizza.jpg');
+}
+
+.soups {
+  background-image:
+    linear-gradient(0deg, rgba(0, 0, 0, .45), transparent 38%),
+    url('./images/soups.jpg');
+}
+
+.hot-dishes {
+  background-image:
+    linear-gradient(0deg, rgba(0, 0, 0, .45), transparent 38%),
+    url('./images/hot-dishes.jpg');
+}
+
+.salads {
+  background-image:
+    linear-gradient(0deg, rgba(0, 0, 0, .45), transparent 38%),
+    url('./images/salads.jpg');
+}
+
+/* Фокус при навигации с клавиатуры */
+
+a:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1024px) {
+  .header-inner {
+    flex-wrap: wrap;
+    padding: 16px 0;
+  }
+
+  .navigation {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .nav-list {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    align-items: flex-start;
+  }
+
+  .contact-info {
+    width: min(188px, calc(100% - 153px));
+    height: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .phone {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .contact-info p {
+    width: 100%;
+    height: auto;
+    white-space: normal;
+  }
+
+  .nav-list {
+    justify-content: flex-start;
+    gap: 8px 16px;
+  }
+
+  .nav-list li {
+    width: auto !important;
+  }
+
+  .nav-list a {
+    font-size: 14px;
+  }
+
+  .menu {
+    padding-top: 24px;
+  }
+
+  .menu h1 {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .menu-card span {
+    height: 28px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
