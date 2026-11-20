@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <aside class="delivery-notice" aria-label="Информация о доставке">
+    <div class="container delivery-notice-inner">
+      <span>Бесплатная доставка от 1 000 ₽</span>
+      <img src="./icons/24/x-mark.svg" width="24" height="24" alt="">
+    </div>
+  </aside>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="./index.html"><img src="./images/logo.svg" width="137" height="22" alt="RestoApp"></a>
@@ -29,6 +35,14 @@
   </a>
   <p>Прием заказов с 10:00 до 22:40</p>
 </address>
+      <div class="header-actions">
+        <button class="account-button" type="button" aria-label="Личный кабинет">
+          <img src="./icons/24/user-02.svg" width="24" height="24" alt="">
+        </button>
+        <button class="basket-button" type="button" aria-label="Корзина">
+          <img src="./icons/24/basket.svg" width="24" height="24" alt="">
+        </button>
+      </div>
     </div>
   </header>
   <main class="container">
@@ -40,6 +54,54 @@
         <li><a class="menu-card hot-dishes" href="./index.html"><span>Горячие блюда</span></a></li>
         <li><a class="menu-card salads" href="./index.html"><span>Салаты</span></a></li>
       </ul>
+    </section>
+
+    <section class="dish-section" aria-labelledby="new-title">
+      <div class="dish-section-inner">
+        <h2 id="new-title">Новинки</h2>
+        <ul class="dish-grid">
+        <li class="dish-card">
+          <a href="./index.html" class="dish-link"><span class="dish-image-wrap"><img class="dish-image" src="./images/chinese-egg-soup.png" alt="Китайский яичный суп"><span class="dish-badge"><img src="./icons/vegetarian.svg" width="36" height="36" alt=""></span></span><span class="dish-info"><span class="dish-title">Китайский яичный суп</span><span class="dish-description">Традиционный китайский суп с яйцом и томатами черри</span></span></a>
+          <button class="price-button" type="button">350 ₽</button>
+        </li>
+        <li class="dish-card">
+          <a href="./index.html" class="dish-link"><span class="dish-image-wrap"><img class="dish-image" src="./images/paella.png" alt="Паэлья"><span class="dish-badge"><img src="./icons/vegetarian.svg" width="36" height="36" alt=""></span></span><span class="dish-info"><span class="dish-title">Паэлья</span><span class="dish-description">Традиционное испанское блюдо — рис, колбаски чоризо, куриное бедро, кальмар, кукуруза, горошек, специи</span></span></a>
+          <button class="price-button" type="button">660 ₽</button>
+        </li>
+        <li class="dish-card">
+          <a href="./index.html" class="dish-link"><img class="dish-image" src="./images/beef-bourguignon.png" alt="Биф Бургиньон"><span class="dish-info"><span class="dish-title">Биф Бургиньон</span><span class="dish-description">Блюдо французской кухни — тушёные кусочки говядины с картофелем и болгарским перцем</span></span></a>
+          <button class="price-button" type="button">630 ₽</button>
+        </li>
+        <li class="dish-card">
+          <a href="./index.html" class="dish-link"><span class="dish-image-wrap"><img class="dish-image" src="./images/broken-cucumbers.png" alt="Битые огурцы"><span class="dish-badge"><img src="./icons/vegetarian.svg" width="36" height="36" alt=""></span></span><span class="dish-info"><span class="dish-title">Битые огурцы</span><span class="dish-description">Салат из свежих битых огурцов с уйгурским соусом, кешью и кунжутом</span></span></a>
+          <button class="price-button" type="button">320 ₽</button>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="dish-section popular-section" aria-labelledby="popular-title">
+      <div class="dish-section-inner">
+        <h2 id="popular-title">Популярное</h2>
+        <ul class="dish-grid">
+        <li class="dish-card">
+          <a href="./index.html" class="dish-link"><img class="dish-image" src="./images/pepperoni.png" alt="Пепперони"><span class="dish-info"><span class="dish-title">Пепперони</span><span class="dish-description">Просто и вкусно — томатная основа маринара, колбаски пепперони и сыр моцарелла</span></span></a>
+          <button class="price-button" type="button">660 ₽</button>
+        </li>
+        <li class="dish-card">
+          <a href="./index.html" class="dish-link"><img class="dish-image" src="./images/gorgonzola-pear.png" alt="Груша Горгонзола"><span class="dish-info"><span class="dish-title">Груша Горгонзола</span><span class="dish-description">Нежная пицца на основе сливочного соуса с сыром горгондзола, грушей, медом и кедровыми орехами</span></span></a>
+          <button class="price-button" type="button">780 ₽</button>
+        </li>
+        <li class="dish-card">
+          <a href="./index.html" class="dish-link"><img class="dish-image" src="./images/soups.jpg" alt="Фо Бо"><span class="dish-info"><span class="dish-title">Фо Бо</span><span class="dish-description">Вьетнамский суп с рисовой лапшой, в котором используется говядина, свежая зелень и ростки сои. Подают с добавками, такими как мята, долька лайма, острый соус шрирача, азиатский уксус и лаоганма</span></span></a>
+          <button class="price-button" type="button">490 ₽</button>
+        </li>
+        <li class="dish-card">
+          <a href="./index.html" class="dish-link"><span class="dish-image-wrap"><img class="dish-image" src="./images/tom-yam-with-seafood.png" alt="Том Ям с морепродуктами"><span class="dish-badge"><img src="./icons/seafood.svg" width="36" height="36" alt=""></span><span class="dish-badge"><img src="./icons/sharp.svg" width="36" height="36" alt=""></span></span><span class="dish-info"><span class="dish-title">Том Ям с морепродуктами</span><span class="dish-description">Традиционный тайский суп, на основе кокосового молока и сливок, с добавлением креветок, кальмаров, грибов шиитаке и шампиньонов, помидоров черри и свежей зелени. Подается с паровым тайским рисом</span></span></a>
+          <button class="price-button" type="button">590 ₽</button>
+        </li>
+        </ul>
+      </div>
     </section>
   </main>
 </body>
