@@ -59,27 +59,29 @@ a {
   justify-content: center;
   gap: 12px;
   position: relative;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
 }
 
 .delivery-notice-inner img {
-  position: static;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  flex: 0 0 20px;
 }
 
 /* Шапка сайта */
 
 .site-header {
-  min-height: 72px;
+  min-height: 80px;
   background: linear-gradient(90deg, var(--color-yellow-start) 0%, var(--color-yellow-end) 100%);
   box-shadow: 0 2px 12px rgba(32, 32, 32, .08);
 }
 
 .header-inner {
-  min-height: 72px;
+  min-height: 80px;
   display: grid;
   grid-template-columns: 188px 1fr auto auto;
   column-gap: 24px;
@@ -218,10 +220,14 @@ a {
 }
 
 .basket-button {
+  width: 48px !important;
+  height: 48px !important;
   background: #1C1C1C;
 }
 
 .basket-button img {
+  width: 32px;
+  height: 32px;
   filter: brightness(0) invert(1);
 }
 
@@ -364,7 +370,7 @@ a {
   height: 24px;
   flex: 0 0 24px;
   overflow: hidden;
-  margin-top: 4px;
+  margin-top: 8px;
   color: #1C1C1C;
   font-size: 20px;
   font-weight: 600;
@@ -565,8 +571,8 @@ a:focus-visible {
   }
 
   .delivery-notice-inner {
-    justify-content: flex-start;
-    padding-right: 48px;
+    justify-content: center;
+    padding-right: 0;
     font-size: 12px;
   }
 
